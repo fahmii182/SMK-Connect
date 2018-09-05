@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Absensi
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let item of absensiItems">
+    <ion-item>
+      <ion-avatar item-start>
+        <img [src]="item.user.avatar">
+      </ion-avatar>
+      <h2>{{item.user.name}}</h2>
+    </ion-item>
+    <ion-card-content>
+      <p>{{item.content}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
