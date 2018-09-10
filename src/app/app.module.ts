@@ -12,8 +12,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { Items } from '../mocks/providers/items';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
-import { WelcomePage } from '../pages/welcome/welcome';
-import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -38,8 +36,7 @@ export function provideSettings(storage: Storage) {
 
 @NgModule({
   declarations: [
-    MyApp,
-    WelcomePage
+    MyApp
   ],
   imports: [
     BrowserModule,
@@ -56,8 +53,7 @@ export function provideSettings(storage: Storage) {
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    WelcomePage
+    MyApp
   ],
   providers: [
     Api,
