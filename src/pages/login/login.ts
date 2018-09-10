@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, AlertController, LoadingController, Loading } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
-import { HomePage } from '../welcome/welcome';
+import { WelcomePage } from '../welcome/welcome';
 
 /**
  * Generated class for the LoginPage page.
@@ -31,7 +31,7 @@ export class LoginPage {
     this.showLoading()
     this.auth.login(this.registerCredentials).subscribe(allowed => {
       if (allowed) {
-        this.nav.setRoot(HomePage);
+        this.nav.setRoot(WelcomePage);
       } else {
         this.showError("These credentials do not match our records.");
       }
